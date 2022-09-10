@@ -20,6 +20,8 @@ class RestaurantTest {
         restaurant =new Restaurant("Amelie's cafe","Chennai",openingTime,closingTime);
         restaurant.addToMenu("Sweet corn soup",119);
         restaurant.addToMenu("Vegetable lasagne", 269);
+        restaurant.addToMenu("Red Pasta",50);
+        restaurant.addToMenu("Chees Sandwitch", 30);
 
     }
 
@@ -69,8 +71,8 @@ class RestaurantTest {
     public void selecting_items_in_menu_should_return_total_cost() {
         int testTotal = 0;
         List<String> mySelection = new ArrayList<>();
-        mySelection.add("Red Pasta ");
-        mySelection.add("Chees Sandwitch ");
+        mySelection.add("Red Pasta");
+        mySelection.add("Chees Sandwitch");
 
         assertEquals(80, restaurant.calculateOrderTotal(mySelection));
 
